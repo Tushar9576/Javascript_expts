@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Operations</title>
+</head>
+
+<body>
+    <h1>Tushar Kant</h1>
+    <h1>Roll No - 42469</h1>
+    <h1>ABC-ID - 116-584-240-006</h1>
+    <h1>Array Object Operations</h1>
+    <h1>Append object to the array</h1>
+    <p>Click the button to add new elements to the array.</p>
+    <input type="text" id="number">
+    <button onclick="pushFunction()">Add elements</button>
+
+    <button onclick="popFunction()">Remove elements from end</button>
+
+    <button onclick="shiftFunction()">Shift elements to front</button>
+
+    <button onclick="unshiftFunction()">Unshift elements</button>
+    <p id="ar"></p>
+    <p id="ob"></p>
+    <p id="pop"></p>
+    <p id="shift"></p>
+
+    <script>
+        var list = new Array();
+        document.getElementById("ar").innerHTML = list;
+        function pushFunction() {
+
+            var c = document.getElementById("number").value;
+            list.push(c);
+            document.getElementById("ar").innerHTML = list;
+            if (Array.isArray(list)) document.getElementById("ob").innerHTML = "This object is an array";
+            else document.getElementById("ob").innerHTML = "This object is not an array";
+
+        }
+        function popFunction() {
+
+            //var c = document.getElementById("number").value;
+            var poppedEle = list.pop();
+            //console.log(poppedEle)
+            document.getElementById("ar").innerHTML = list;
+            document.getElementById("pop").innerHTML = "Popped element : " + poppedEle;
+            if (Array.isArray(list)) document.getElementById("ob").innerHTML = "This object is an array";
+            else document.getElementById("ob").innerHTML = "This object is not an array";
+
+        }
+
+        function shiftFunction() {
+
+            var c = document.getElementById("number").value;
+            var shiftEle = list.shift(c);
+            document.getElementById("ar").innerHTML = list;
+            document.getElementById("pop").innerHTML = "Shifted element : " + shiftEle;
+            if (Array.isArray(list)) document.getElementById("ob").innerHTML = "This object is an array";
+            else document.getElementById("ob").innerHTML = "This object is not an array";
+
+        }
+
+        function unshiftFunction() {
+            var c = document.getElementById("number").value;
+            list.unshift(c);
+            document.getElementById("ar").innerHTML = list;
+            if (Array.isArray(list)) document.getElementById("ob").innerHTML = "This object is an array";
+            else document.getElementById("ob").innerHTML = "This object is not an array";
+        }
+    </script>
+</body>
+
+</html>
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+
+<body style="text-align: center;">
+    <h1>Tushar Kant</h1>
+    <h1>42469</h1>
+    <h1>ABC-ID - 116-584-240-006</h1>
+    <h1>Multiplication Table</h1>
+    <label for="Given">Enter the Given:</label>
+
+    <input type="number" id="Given" placeholder="Enter value of Given">
+    <br><br>
+
+    <button onclick="tables1(); tables2()">View Table</button>
+    <p>Multiplication Table using FOR :<span id="display1"></span></p><br>
+
+    <p>Multiplication Table using WHILE :<span id="display2"></span></p><br>
+
+    <p>Multiplication Table using DO WHILE :<span id="display3"></span></p><br>
+
+
+
+
+    <script>
+        function tables1() {
+            var Given = Number(document.getElementById("Given").value);
+            var length = 10;
+            var i = 1;
+
+            var forl = "";
+            for (i = 1; i <= length; i++) {
+                forl += "<br>" + i + "*" + Given + "=" + (i * Given);
+            }
+            document.getElementById("display1").innerHTML = forl;
+
+            var i = 1;
+            var whilel = "";
+            while (i <= length) {
+                whilel += "<br>" + i + "*" + Given + "=" + (i * Given);
+                i++;
+            }
+            document.getElementById("display2").innerHTML = whilel;
+
+            var i = 1;
+            var dwhilel = "";
+            do {
+                dwhilel += "<br>" + i + "*" + Given + "=" + (i * Given);
+                i++;
+            }
+            while (i <= length)
+            document.getElementById("display3").innerHTML = dwhilel;
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
